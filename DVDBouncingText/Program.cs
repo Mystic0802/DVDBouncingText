@@ -12,7 +12,7 @@
             //bouncingObjects.Add(new BouncingObject((0.6, 0.15), 1f, 5));
             //bouncingObjects.Add(new BouncingObject((-1, 0.1), 2f, 1, 5));
             //bouncingObjects.Add(new BouncingObject((0.1, -1), 1f, 3, 3));
-            bouncingObjects.Add(new BouncingObject(110,20,(1,1), 1f, 2,2));
+            bouncingObjects.Add(new BouncingObject(1f, 6,6));
 
             while (true)
             {
@@ -65,6 +65,8 @@
             White = ConsoleColor.White,
         }
 
+        #region [ Constructors ]
+
         public BouncingObject()
         {
             X = Console.WindowWidth / 2;
@@ -76,6 +78,18 @@
             VerticalSize = 1;
             HorizontalSize = 1;
         }
+
+        public BouncingObject(float velocity, int verticalSize, int horizontalSize)
+        {
+            X = Console.WindowWidth / 2;
+            Y = Console.WindowHeight / 2;
+            Direction = (_random.NextDouble(), _random.NextDouble());
+            Velocity = velocity;
+            CurrentColor = GetRandomConsoleColour();
+            VerticalSize = verticalSize;
+            HorizontalSize = horizontalSize;
+        }
+
         public BouncingObject(double x, double y, float velocity = 1, int verticalSize = 1, int horizontalSize = 1)
         {
             X = x;
@@ -108,6 +122,7 @@
             HorizontalSize = horizontalSize;
         }
 
+        #endregion
 
         public void Move()
         {
@@ -134,7 +149,7 @@
                 CurrentColor = GetRandomConsoleColour();
 
                 if (X + HorizontalSize - 1 == Console.WindowWidth - 1 || X == 0)
-                Program.AddBoucy(new BouncingObject(X, Y, Velocity, VerticalSize - 1 > 0 ? VerticalSize - 1 : 1, HorizontalSize - 1 > 0 ? HorizontalSize - 1 : 1));
+                    Program.AddBoucy(new BouncingObject(X, Y, Velocity, VerticalSize - 1 > 0 ? VerticalSize - 1 : 1, HorizontalSize - 1 > 0 ? HorizontalSize - 1 : 1));
             }
 
 
