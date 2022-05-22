@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVDBouncingText", "DVDBouncingText\DVDBouncingText.csproj", "{E7AE8A06-E1DE-425C-865D-D56599D1D54E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7AE8A06-E1DE-425C-865D-D56599D1D54E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7AE8A06-E1DE-425C-865D-D56599D1D54E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7AE8A06-E1DE-425C-865D-D56599D1D54E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7AE8A06-E1DE-425C-865D-D56599D1D54E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {617A90B7-3065-473F-91B8-7F408CB6548D}
+	EndGlobalSection
+EndGlobal
