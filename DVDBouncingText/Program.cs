@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        const int FrameRate = 10;
+        const int FrameRate = 120;
         private static List<BouncingObject> bouncingObjects = new();
 
         static void Main(string[] args)
@@ -12,7 +12,7 @@
             //bouncingObjects.Add(new BouncingObject((0.6, 0.15), 1f, 5));
             //bouncingObjects.Add(new BouncingObject((-1, 0.1), 2f, 1, 5));
             //bouncingObjects.Add(new BouncingObject((0.1, -1), 1f, 3, 3));
-            bouncingObjects.Add(new BouncingObject(1f, 6,6));
+            bouncingObjects.Add(new BouncingObject(1f, 3,3));
 
             while (true)
             {
@@ -27,6 +27,7 @@
 
         public static void AddBoucy(BouncingObject bouncy)
         {
+            if(bouncingObjects.Count < 10)
             bouncingObjects.Add(bouncy);
         }
     }
@@ -148,9 +149,9 @@
                 Direction = (Direction.x, Direction.y * -1);
                 CurrentColor = GetRandomConsoleColour();
 
-                if (X + HorizontalSize - 1 == Console.WindowWidth - 1 || X == 0)
-                    Program.AddBoucy(new BouncingObject(X, Y, Velocity, VerticalSize - 1 > 0 ? VerticalSize - 1 : 1, HorizontalSize - 1 > 0 ? HorizontalSize - 1 : 1));
             }
+                if ((nextX + HorizontalSize + 0.25 > Console.WindowWidth || nextX < 0.25) && (nextY + VerticalSize + 0.25 > Console.WindowHeight || nextY < 0.25))
+                    Program.AddBoucy(new BouncingObject(X, Y, (Direction.x*-1, Direction.y*-1) , Velocity-(float)0.1, VerticalSize - 1 > 0 ? VerticalSize - 1 : 1, HorizontalSize - 1 > 0 ? HorizontalSize - 1 : 1));
 
 
             PreviousX = X;
