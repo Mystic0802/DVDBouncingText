@@ -1,5 +1,3 @@
 # DVDBouncingText
-After all these years of programming, never have I created my own version of the DVD bouncing logo.
-
-So finally, this is it.
-Its buggy, unoptimised but damn, is it fun to watch.
+After all this time, having realised I never created my own version of the DVD bouncing logo.
+I made this.... buggy, unoptimised mess, but it is fun to watch.
